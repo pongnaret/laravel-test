@@ -22,3 +22,7 @@ Route::get('/contact', function () {
 Route::get('/profile', function () {
     return view('profile', ['name' => 'Tavon', 'age' => 20]);
 });
+
+Route::get('/params/{name}/{age}/{salary}', function ($name, $age, $salary) {
+    return view('params', compact('name', 'age', 'salary'));
+});
